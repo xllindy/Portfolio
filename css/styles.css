@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #355244;
+    color: #F4EFED;
+    padding: 15px;
+    text-align: center;
+}
+
+nav {
+    background-color: #6C8C7D;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: #F4EFED;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    background-color: #5A393E;
+    color: #F4EFED;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Education */
+#education {
+    display: grid;
+    gap: 20px;
+    justify-content: start;
+}
+
+.education-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.education-item h3 {
+    color: #5A393E;
+}
+
+.education-subject {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.education-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.education-content {
+    margin: 0 0 0 20px;
+}
+
+
+ /* Contact */
+ #contacts {
+    display: grid;
+    gap: 20px;
+}
+
+#contact-info {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+}
