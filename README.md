@@ -1,1 +1,1 @@
-Dit is een GitHub-repository van mijn portfolio! Hier vind je een stukje over mezelf, opdrachten, leeruitkomsten en mijn contactgegevens. Dit portfolio is ontworpen om hier een overzicht van te maken.
+Dit is een GitHub-repository voor mijn website portfolio! Hier vind je een stukje over mezelf, opdrachten, leeruitkomsten en mijn contactgegevens. Dit portfolio is ontworpen om hier een overzicht van te maken.
