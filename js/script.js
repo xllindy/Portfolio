@@ -37,3 +37,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.project');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    
+    let currentIndex = 0;
+    
+    function showCurrentProject() {
+        projects.forEach((project, index) => {
+            if (index === currentIndex) {
+                project.style.display = 'block';
+            } else {
+                project.style.display = 'none';
+            }
+        });
+    }
+
+    showCurrentProject();
+    
+    leftArrow.addEventListener('click', function() {
+        currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
+        showCurrentProject();
+    });
+    
+    rightArrow.addEventListener('click', function() {
+        currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
+        showCurrentProject();
+    });
+});
