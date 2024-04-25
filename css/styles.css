@@ -109,12 +109,12 @@ html {
 #maintitle {
     position: relative;
     color: #4F6C32;
-    font-size: 4em;
+    font-size: 3em;
     z-index: 2;
 }
 
 .about-button {
-    font-size: 1.2em;
+    font-size: 1em;
     position: absolute;
     bottom: 35%;
     left: 50%;
@@ -153,6 +153,7 @@ html {
     flex: 1;
     margin-right: 20px;
 }
+
 
 .about-image {
     flex: 1;
