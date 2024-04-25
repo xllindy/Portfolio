@@ -139,19 +139,19 @@ html {
     align-items: center;
     justify-content: center;
     padding-top: 5%;
+    width: 100%;
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .about-text {
-    flex: 1;
-    margin-right: 20px;
+    flex: 2;
 }
 
 
