@@ -42,12 +42,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = document.querySelectorAll('.project');
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
-    
     let currentIndex = 0;
     
-    function showCurrentProject() {
+    function showCurrentProjects() {
         projects.forEach((project, index) => {
-            if (index === currentIndex) {
+            if (index >= currentIndex && index < currentIndex + 6) {
                 project.style.display = 'block';
             } else {
                 project.style.display = 'none';
@@ -55,15 +54,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    showCurrentProject();
+    showCurrentProjects();
     
     leftArrow.addEventListener('click', function() {
-        currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
-        showCurrentProject();
+        currentIndex = (currentIndex === 0) ? projects.length - 6 : currentIndex - 2;
+        showCurrentProjects();
     });
     
     rightArrow.addEventListener('click', function() {
-        currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
-        showCurrentProject();
+        currentIndex = (currentIndex === projects.length - 6) ? 0 : currentIndex + 2;
+        showCurrentProjects();
     });
 });

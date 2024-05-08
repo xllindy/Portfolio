@@ -190,9 +190,9 @@ html {
 
 .project-gallery {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 3px;
 }
 
 .project {
@@ -200,6 +200,7 @@ html {
     height: 200px;
     background-color: #ccc;
     cursor: pointer;
+    border-radius: 15px;
 }
 
 .project-arrows {
