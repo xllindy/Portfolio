@@ -190,7 +190,6 @@ html {
 
 .project-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 3px;
 }
@@ -214,6 +213,7 @@ html {
     display: inline-block;
     margin: 0 10px;
     cursor: pointer;
+    vertical-align: middle;
 }
 
 .left-arrow {
