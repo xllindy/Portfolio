@@ -1,1 +1,13 @@
-Dit is een GitHub-repository voor mijn website portfolio! Hier vind je een stukje over mezelf, opdrachten, leeruitkomsten en mijn contactgegevens. Dit portfolio is ontworpen om hier een overzicht van te maken.
+**Project Title**
+Portfolio Website
+
+**Description**
+This repository contains the source code for my personal portfolio website. The website showcases the projects I have worked on and the learning outcomes of this semester.
+
+git clone https://github.com/xllindy/Portfolio.git
+
+**Author**
+Lindy Rutten
+Email: lindy.rutten@student.fontys.nl
+GitHub: xllindy
+Gitlab: I539663
