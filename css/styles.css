@@ -57,10 +57,32 @@ nav {
 }
 
 .list a {
-    color: inherit;
+    color: #304B15;
     text-decoration: none;
     padding: 20px;
+    position: relative;
 }
+
+.list a::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease; 
+    z-index: 9010;
+}
+
+.list a:hover{
+    color:black;
+}
+
+.list a:hover::after {
+    width: 100%;
+}
+
 
 
 .main-container {
