@@ -67,12 +67,20 @@ document.addEventListener('DOMContentLoaded', function() {
     showCurrentProjects();
     
     leftArrow.addEventListener('click', function() {
-        currentPairIndex = (currentPairIndex === 0) ? items.length - 1 : currentPairIndex - 1;
+        if (currentPairIndex === 0) {
+            currentPairIndex = items.length - 1;
+        } else {
+            currentPairIndex = currentPairIndex - 1;
+        }
         showCurrentProjects();
     });
     
     rightArrow.addEventListener('click', function() {
-        currentPairIndex = (currentPairIndex === items.length - 1) ? 0 : currentPairIndex + 1;
+        if (currentPairIndex === items.length - 1) {
+            currentPairIndex = 0;
+        } else {
+            currentPairIndex = currentPairIndex + 1;
+        }
         showCurrentProjects();
     });
 });
