@@ -198,6 +198,11 @@ nav {
     height: 250px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform .4s ease-in-out;
+}
+
+.about-image img:hover{
+    transform: rotate(360deg);
 }
 
 .about-text h2 {

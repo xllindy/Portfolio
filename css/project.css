@@ -24,6 +24,7 @@ html {
     scrollbar-width: none;
   }
 
+/* Navigation */
 nav {
     position: fixed;
     top: 0;
@@ -57,7 +58,7 @@ nav {
 }
 
 .list a {
-    color: inherit;
+    color: #304B15;
     text-decoration: none;
     padding: 20px;
     position: relative;
@@ -66,13 +67,17 @@ nav {
 .list a::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     left: 0;
     width: 0%;
     height: 2px;
-    background-color: white;
+    background-color: black;
     transition: width 0.3s ease; 
     z-index: 9010;
+}
+
+.list a:hover{
+    color:black;
 }
 
 .list a:hover::after {
@@ -84,3 +89,4 @@ main{
     margin-top:6%;
     z-index: 1;
 }
+
