@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F4EFED;
+    font-family: 'Sarabun', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+html {
+    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
+  }
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 32px;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    color: #304B15;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    color: #304B15;
+    margin-bottom: 20px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 16px 20px 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s ease-out;
+    backdrop-filter: blur(8px) brightness(1.2);
+    -webkit-backdrop-filter: blur(8px) brightness(1.2);
+    text-shadow: 0 0 3px rgba(0,0,0,0.5);
+    color: black;
+    font-size: 1.15em;
+    z-index: 9000;
+    background-color: rgba(48,75,21,0.1);
+}
+
+#logo {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
+    object-fit: cover;
+}
+
+.mask {
+    mask-image: linear-gradient(black 70%, transparent);
+    -webkit-mask-image: linear-gradient(black 70%, transparent);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list a {
+    color: #304B15;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    position: relative;
+}
+
+.list a::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+    z-index: 9010;
+}
+
+.list a:hover {
+    color: black;
+}
+
+.list a:hover::after {
+    width: 100%;
+}
+
+main {
+    margin-top: 10px;
+    padding: 100px 20px 20px 20px;
+}
+
+
+.learning-outcomes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.learning-outcome {
+    background-color: #FFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.outcome-details p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.context {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #304B15;
+}
