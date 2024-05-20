@@ -1,3 +1,4 @@
+/* Parallax effect */
 let bg = document.getElementById("bg");
 let nature = document.getElementById("nature");
 let rock= document.getElementById("rock");
@@ -12,6 +13,7 @@ window.addEventListener('scroll', function(){
     title.style.top = value * 1 + 'px';
 })
 
+/* Typing name effect */
 const maintitle = document.getElementById('maintitle');
 const newTitle = 'Lindy Rutten';
 let charIndex = 0;
@@ -27,6 +29,7 @@ function writeTitle() {
 }
 writeTitle();
 
+/* Scrolling navigation */
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.navbar a').forEach(function(link) {
         link.addEventListener('click', function(e) {
@@ -38,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/* Projects carousel */
 document.addEventListener('DOMContentLoaded', function() {
     const projects = document.querySelectorAll('.project');
     const leftArrow = document.querySelector('.left-arrow');

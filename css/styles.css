@@ -50,7 +50,6 @@ nav {
     height: auto;
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
     object-fit: cover;
-    margin-left: 100%;
 }
 
 .mask {
@@ -112,9 +111,6 @@ nav {
     flex-direction: column;
     padding: 0;
     list-style-type: none;
-    opacity: 0; 
-    pointer-events: none; 
-    transition: opacity 0.3s ease; 
 }
 
 .dropdown-content li {
@@ -137,9 +133,6 @@ nav {
 .dropdown:hover .dropdown-content {
     z-index: 10000;
     display: flex;
-    opacity: 1;
-    pointer-events: auto;
-
 }
 
 .main-container {
