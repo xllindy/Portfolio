@@ -148,9 +148,31 @@ main {
 }
 
 .images {
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: 10px;
+}
+
+.bulletpoints {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+p.bullet {
+    position: relative;
+    padding-left: 20px;
+}
+
+p.bullet::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .images img {
