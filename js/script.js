@@ -43,27 +43,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Projects carousel */
 document.addEventListener('DOMContentLoaded', function() {
-    const projects = document.querySelectorAll('.project');
+    const projects = document.querySelectorAll('.project-link');
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
     
-    const items = [
-        [1, 2],
-        [3, 4],
-        [5, 6],
-        [7, 8]
-    ];
-
+   
     let currentPairIndex = 0;
+    let amountOfProjectsOnScreen=6
+    let amountOfProjects=projects.length
     
     function showCurrentProjects() {
         projects.forEach((project, index) => {
-            const pairIndex = Math.floor(index / 2) % items.length;
-            const [firstIndex, secondIndex] = items[pairIndex];
-            if (pairIndex === currentPairIndex) {
-                project.style.display = 'block';
+            if((index>=currentPairIndex)&&(index<currentPairIndex+amountOfProjectsOnScreen)){
+                project.classList.add("visible") 
             } else {
-                project.style.display = 'none';
+                project.classList.remove("visible")
             }
         });
     }
@@ -72,19 +66,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     leftArrow.addEventListener('click', function() {
         if (currentPairIndex === 0) {
-            currentPairIndex = items.length - 1;
+            currentPairIndex = amountOfProjects - amountOfProjectsOnScreen;
         } else {
-            currentPairIndex = currentPairIndex - 1;
+            currentPairIndex = currentPairIndex - 2;
         }
         showCurrentProjects();
     });
     
     rightArrow.addEventListener('click', function() {
-        if (currentPairIndex === items.length - 1) {
+        if (currentPairIndex === amountOfProjects - amountOfProjectsOnScreen) {
             currentPairIndex = 0;
         } else {
-            currentPairIndex = currentPairIndex + 1;
+            currentPairIndex = currentPairIndex + 2;
         }
         showCurrentProjects();
+    });
+});
+
+/* Open full image */
+document.addEventListener('DOMContentLoaded', function() {
+    const imagefull = document.getElementById('imagefull');
+    const imagefullImage = document.getElementById('imagefull-image');
+    const closeBtn = document.querySelector('.imagefull .close');
+    const images = document.querySelectorAll('.images img');
+
+    images.forEach(image => {
+        image.addEventListener('click', function() {
+            imagefull.style.display = 'flex';
+            imagefullImage.src = this.src;
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        imagefull.style.display = 'none';
+    });
+
+    imagefull.addEventListener('click', function(e) {
+        if (e.target !== imagefullImage) {
+            imagefull   .style.display = 'none';
+        }
     });
 });

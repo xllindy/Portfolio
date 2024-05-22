@@ -36,6 +36,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     transition: 0.3s ease-out;
+    mask-image: linear-gradient(to bottom, black 70%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);
     backdrop-filter: blur(8px) brightness(1.2);
     -webkit-backdrop-filter: blur(8px) brightness(1.2);
     text-shadow: 0 0 3px rgba(0,0,0,0.5);
@@ -51,11 +53,11 @@ nav {
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
     object-fit: cover;
 }
-
+/*
 .mask {
     mask-image: linear-gradient(black 70%, transparent);
     -webkit-mask-image: linear-gradient(black 70%, transparent);
-}
+}*/
 
 .list {
     display: flex;
@@ -99,11 +101,13 @@ nav {
 
 .dropdown {
     position: relative;
+    mask-image: none;
+    -webkit-mask-image: none;
   }  
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #F4EFED;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     min-width: 160px;
@@ -274,6 +278,7 @@ nav {
 
 .project-gallery {
     display: grid;
+    grid-template-columns:repeat(3,200px);
     justify-content: center;
     gap: 3px;
 }
@@ -287,6 +292,18 @@ nav {
     color: #FFFFFF;
     cursor: pointer;
     border-radius: 15px;
+}
+
+.project-link{    
+    display:none;
+    grid-column:1;
+    grid-row:3;
+}
+
+.project-link.visible{
+    display:block;
+    grid-column: auto;
+    grid-row:auto;
 }
 
 .project-arrows {
