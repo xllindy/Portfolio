@@ -60,9 +60,6 @@ I'm a ICT Media student at Fontys Eindhoven.
 Javascript, HTML, CSS...
 
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
-
-
 **Author**
 Lindy Rutten
 Email: lindy.rutten@student.fontys.nl
