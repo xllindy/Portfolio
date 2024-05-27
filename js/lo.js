@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     /* Verbergt de overlay */
     imagefull.addEventListener('click', function(e) {
         if (e.target !== imagefullImage) { /* Controleerd of er geklikt wordt */
-            imagefull   .style.display = 'none';
+            imagefull.style.display = 'none';
         }
     });
 });
