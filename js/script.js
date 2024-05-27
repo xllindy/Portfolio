@@ -4,6 +4,7 @@ let nature = document.getElementById("nature");
 let rock= document.getElementById("rock");
 let title= document.getElementById("maintitle");
 
+/* Scroll event */
 window.addEventListener('scroll', function(){
     let value = window.scrollY;
 
@@ -18,15 +19,18 @@ const maintitle = document.getElementById('maintitle');
 const newTitle = 'Lindy Rutten';
 let charIndex = 0;
 
+/* Functie om letter voor letter te typen */
 function writeTitle() {
     const interval = setInterval(() => {
         maintitle.textContent += newTitle[charIndex];
         charIndex++;
+        /* Controleerd of hele title er staat */
         if (charIndex === newTitle.length) {
             clearInterval(interval);
         }
     }, 100);
 }
+/* Roept de functie aan */
 writeTitle();
 
 /* Scrolling navigation */
@@ -52,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let amountOfProjectsOnScreen=6
     let amountOfProjects=projects.length
     
+    /* Functie om projecten zichtbaar te maken */
     function showCurrentProjects() {
         projects.forEach((project, index) => {
             if((index>=currentPairIndex)&&(index<currentPairIndex+amountOfProjectsOnScreen)){
@@ -64,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     showCurrentProjects();
     
+    /* Ga twee projecten terug, als je bij begin bent ga naar einde */
     leftArrow.addEventListener('click', function() {
         if (currentPairIndex === 0) {
             currentPairIndex = amountOfProjects - amountOfProjectsOnScreen;
@@ -73,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showCurrentProjects();
     });
     
+    /* Ga twee projecten vooruit, als je bij einde bent ga naar begin */
     rightArrow.addEventListener('click', function() {
         if (currentPairIndex === amountOfProjects - amountOfProjectsOnScreen) {
             currentPairIndex = 0;
