@@ -33,7 +33,7 @@ function writeTitle() {
 /* Roept de functie aan */
 writeTitle();
 
-/* Scrolling navigation */
+/* Scrolling navigation 
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.navbar a').forEach(function(link) {
         link.addEventListener('click', function(e) {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-});
+}); */
 
 /* Projects carousel */
 document.addEventListener('DOMContentLoaded', function() {

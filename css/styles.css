@@ -220,7 +220,7 @@ nav {
 
 /* About Section */
 .about-container {
-    padding-top: 7%;
+    padding-top: 7vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,10 +253,12 @@ nav {
     height: 250px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: bounce 1s ease-in-out;
+    animation-iteration-count:0;
 }
 
 .about-image img:hover {
-    animation: bounce 1s ease-in-out;
+    animation-iteration-count:3;
 }
 
 .about-text h2 {

@@ -1,4 +1,4 @@
-/* Scrolling navigation */
+/* Scrolling navigation
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.navbar a').forEach(function(link) {
         link.addEventListener('click', function(e) {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
             targetSection.scrollIntoView({ behavior: 'smooth' });
         });
     });
-});
+}); */
 
 /* Open full image */
 document.addEventListener('DOMContentLoaded', function() {
