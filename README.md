@@ -10,16 +10,7 @@ This repository contains the source code for my personal portfolio website. The 
 
 This project uses JS, HTML and CSS. 
 
-
-## Installation
-
-Install portfolio with npm
-
-```bash
-  npm install xllindy/Portfolio
-  cd xllindy/Portfolio
-```
-    
+ 
 ## Run Locally
 
 Clone portfolio
@@ -28,23 +19,10 @@ Clone portfolio
   git clone https://github.com/xllindy/Portfolio.git
 ```
 
-Go to the project directory
 
-```bash
-  cd xllindy/Portfolio
-```
+## License
+Portfolio © 2024 by Lindy Rutten is licensed under CC BY-NC 4.0 
 
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm run start
-```
 
 
 ## 🚀 About Me
