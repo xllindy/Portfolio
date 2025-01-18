@@ -389,26 +389,52 @@ nav {
 .lo-button {
     display: inline-block;
     padding: 20px 30px; 
-    background-color: #859A71;
-    color: white;
+    background-color: #DEDDD8;
+    color: #010101;
     text-decoration: none;
-    border-radius: 5px;
     font-family: 'Sarabun', Arial, Helvetica, sans-serif;
     font-size: 18px; 
     transition: background-color 0.3s ease;
+    max-width: 220px;
+    min-height: 220px;
+    position: relative;
+}
+
+.lo-title {
+    margin-bottom: 20px;
+}
+
+.lo-bullets {
+    display: list-item;
+    font-size: 14px;
+    color: #304B15;
+    margin-top: 5px;
+    list-style-type: circle;
+    text-align: left;
+}
+
+.lo-button::after {
+    content: '→';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #304B15;
 }
 
 .lo-button:hover {
     background-color: #617f43;
+    color: white;
 }
 
-.lo-subtitle {
-    display: block;
-    font-size: 14px;
-    font-style: italic;
-    color: #ffffff;
-    margin-top: 5px;
+.lo-button:hover .lo-bullets {
+    color: white;
 }
+
+.lo-button:hover::after {
+    color: white;
+}
+
 
 
 /* Keyframes */
