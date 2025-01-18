@@ -37,8 +37,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     transition: 0.3s ease-out;
-    /*mask-image: linear-gradient(to bottom, black 70%, transparent);
-    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent);*/
     backdrop-filter: blur(8px) brightness(1.2);
     -webkit-backdrop-filter: blur(8px) brightness(1.2);
     text-shadow: 0 0 3px rgba(0,0,0,0.5);
@@ -54,11 +52,6 @@ nav {
     filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
     object-fit: cover;
 }
-/*
-.mask {
-    mask-image: linear-gradient(black 70%, transparent);
-    -webkit-mask-image: linear-gradient(black 70%, transparent);
-}*/
 
 .list {
     display: flex;
@@ -244,21 +237,62 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .about-image img {
-    position: absolute;
-    border-radius: 50%;
+    position: relative;
     width: 250px; 
     height: 250px;
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    animation: bounce 1s ease-in-out;
-    animation-iteration-count:0;
 }
 
-.about-image img:hover {
-    animation-iteration-count:3;
+.about-image::before,
+.about-image::after {
+    content: '';
+    position: absolute;
+    border: #304B15 solid 7px;
+    width: 50px; 
+    height: 50px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.about-image::before {
+    top: 5px; 
+    left: 80px; 
+    border-bottom: none;
+    border-right: none;
+}
+
+.about-image::after {
+    bottom: -13px; 
+    right: 80px;
+    border-top: none;
+    border-left: none;
+}
+
+.about-image:hover::before,
+.about-image:hover::after {
+    content: '';
+    position: absolute;
+    border: #304B15 solid 7px;
+    width: 227px; 
+    height: 252px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.about-image:hover:before {
+    top: 5px; 
+    left: 80px; 
+    border-bottom: none;
+    border-right: none;
+}
+
+.about-image:hover::after {
+    bottom: -13px; 
+    right: 80px;
+    border-top: none;
+    border-left: none;
 }
 
 .about-text h2 {
@@ -283,7 +317,7 @@ nav {
     display: grid;
     grid-template-columns:repeat(3,200px);
     justify-content: center;
-    gap: 3px;
+    gap: 30px;
 }
 
 .project {
@@ -294,7 +328,6 @@ nav {
     background-color: #859A71;
     color: #FFFFFF;
     cursor: pointer;
-    border-radius: 15px;
 }
 
 .project-link{    

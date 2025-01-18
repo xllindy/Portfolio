@@ -16,7 +16,7 @@ window.addEventListener('scroll', function(){
 
 /* Typing name effect */
 const maintitle = document.getElementById('maintitle');
-const newTitle = 'Lindy Rutten';
+const newTitle = 'Portfolio van Lindy Rutten';
 let charIndex = 0;
 
 /* Functie om letter voor letter te typen */
@@ -32,18 +32,6 @@ function writeTitle() {
 }
 /* Roept de functie aan */
 writeTitle();
-
-/* Scrolling navigation 
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.navbar a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId); 
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-}); */
 
 /* Projects carousel */
 const projects = document.querySelectorAll('.project-link');
