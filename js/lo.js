@@ -1,15 +1,3 @@
-/* Scrolling navigation
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.navbar a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId); 
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-}); */
-
 /* Open full image */
 const imagefull = document.getElementById('imagefull');
 const imagefullImage = document.getElementById('imagefull-image');
